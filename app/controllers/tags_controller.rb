@@ -12,8 +12,7 @@ class TagsController < ApplicationController
 
 
   def tag_params
-    puts params
-    params.require(:tag).permit(:tag)
+    params.require(:tag).permit(:tag, :id)
   end
 
 
