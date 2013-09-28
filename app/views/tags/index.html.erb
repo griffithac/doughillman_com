@@ -1,2 +1,17 @@
-<h1>Tags#index</h1>
-<p>Find me in app/views/tags/index.html.erb</p>
+<h1>Tags</h1>
+
+<%= form_for Tag.new do |f| %>
+  <%= f.label :tag %>
+  <%= f.text_field :tag %>
+  <%= f.submit %>
+<% end %>
+
+<ul>
+  <% for tag in @tags %>
+
+  <li>
+  <%= tag.tag %>
+  </li>
+
+  <% end %>
+</ul>
