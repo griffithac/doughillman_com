@@ -5,14 +5,15 @@ class TagsController < ApplicationController
   end
 
   def create
-    @tag = Tag.create(params[:tag])
+    @tag = Tag.create(tag_params)
     redirect_to :back
   end
 
 
 
   def tag_params
-    params.require(:tag).permit(:tag, :id)
+    puts params
+    params.require(:tag).permit(:tag)
   end
 
 
