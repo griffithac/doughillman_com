@@ -7,7 +7,7 @@
 <% end %>
 
 <ul>
-  <% for tag in @tags %>
+  <% @tags.each do |tag| %>
 
   <li>
   <%= tag.tag %>
