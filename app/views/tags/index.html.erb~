@@ -1,0 +1,17 @@
+<h1>Tags</h1>
+
+<%= form.for Tag.new do |f| %>
+  <%= f.label :tag %>
+  <%= f.text_field :tag %>
+  <%= f.submit %>
+<% end %>
+
+<ul>
+  <% for tag in @tags %>
+
+  <li>
+  <%= tag.tag %>
+  </li>
+
+  <% end %>
+</ul>
