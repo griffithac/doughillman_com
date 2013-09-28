@@ -5,7 +5,7 @@ class TagsController < ApplicationController
   end
 
   def create
-    @tag = Tag.create(params[:tag])
+    @tag = Tag.create(tag_params)
     redirect_to :back
   end
 
