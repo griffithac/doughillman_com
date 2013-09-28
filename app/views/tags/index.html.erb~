@@ -1,16 +1,17 @@
 <h1>Tags</h1>
 
-<%= form.for Tag.new do |f| %>
+<%= form_for Tag.new do |f| %>
   <%= f.label :tag %>
   <%= f.text_field :tag %>
   <%= f.submit %>
 <% end %>
 
 <ul>
-  <% for tag in @tags %>
+  <% @tags.each do |tag| %>
 
   <li>
   <%= tag.tag %>
+  | <%= link_to 'Edit', edit_tag_path(tag) %>
   </li>
 
   <% end %>

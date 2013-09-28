@@ -1,20 +1,34 @@
 class TagsController < ApplicationController
 
   def index
+    @tag = Tag.new
     @tags = Tag.all
   end
 
   def create
-    @tag = Tag.create params[:tag]
+    @tag = Tag.create(tag_params)
     redirect_to :back
   end
 
+  def edit
+    @tag = Tag.find(params[:id])
+  end
 
-
-  def tag_params
-    params.require(:tag).permit(:tag, :id)
+  def update
+    tag = Tag.find(params[:id])
+    if Tag.update_attributes(tag_params)
+      redirect_to tags_path
+    else
+      redirect_to :back
+    end
   end
 
 
 
+
+  private
+
+  def tag_params
+      params.require(:tag).permit(:tag, :id)
+  end
 end
