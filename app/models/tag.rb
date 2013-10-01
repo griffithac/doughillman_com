@@ -1,5 +1,6 @@
 class Tag < ActiveRecord::Base
 
-  # validates :tag, :presence => true, :uniqueness => true
+  validates :tag, :presence => true
+  validates :tag, :uniqueness => true
 
 end
