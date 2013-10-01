@@ -45,4 +45,15 @@ describe "Tags" do
     end
   end
 
+
+  describe "DELETE /tags" do
+    it "should delete a tag" do
+      visit tags_path
+      find('#tag_#{@tag.id}').click_link 'Delete'  # find(:css, 'ul li')
+      page.should have_content "Tag has been deleted."
+      page.should have_no_content "Quzhou"
+    end
+  end
+
+
 end

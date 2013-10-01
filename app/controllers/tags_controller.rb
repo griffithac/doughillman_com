@@ -23,6 +23,11 @@ class TagsController < ApplicationController
     end
   end
 
+  def destroy
+    Tag.delete(params[:id])
+    redirect_to :back, :notice => "Tag has been deleted."
+  end
+
 
 
 
