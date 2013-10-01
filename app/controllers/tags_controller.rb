@@ -16,7 +16,7 @@ class TagsController < ApplicationController
 
   def update
     tag = Tag.find(params[:id])
-    if tag.update_attributes(tag_params)  # this line is causing errors:  undefined method `update_attributes'
+    if tag.update_attributes(tag_params)
       redirect_to tags_path, :notice => 'Your tag has successfully been updated.'
     else
       redirect_to :back, :notice => 'There was an error updating your tag.'
