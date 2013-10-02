@@ -19,6 +19,15 @@ describe "Tags" do
       click_button 'Create Tag'
       current_path.should == tags_path
       page.should have_content "Shanghai"
+      page.should have_content "Tag was succefully created."
+    end
+
+    it "will not create a blank tag" do
+      visit tags_path
+      fill_in 'Tag', :with => ''
+      click_button 'Create Tag'
+      current_path.should == tags_path
+      page.should have_content "There was a problem creating the tag."
     end
   end
 
@@ -41,13 +50,13 @@ describe "Tags" do
       fill_in 'Tag', :with => ''
       click_button 'Update Tag'
       current_path.should == edit_tag_path(@tag)
-      page.should have_content 'There was an error updating your tag.'
+      page.should have_content 'There was a problem updating the tag.'
     end
   end
 
 
   describe "DELETE /tags" do
-    it "should delete a tag" do
+    pending "should delete a tag" do
       visit tags_path
       find('#tag_#{@tag.id}').click_link 'Delete'  # find(:css, 'ul li')
       page.should have_content "Tag has been deleted."

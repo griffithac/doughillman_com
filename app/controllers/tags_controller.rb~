@@ -7,7 +7,11 @@ class TagsController < ApplicationController
 
   def create
     @tag = Tag.create(tag_params)
-    redirect_to :back
+    if @tag.save
+      redirect_to :back, :notice => 'Tag was succefully created.'
+    else
+      redirect_to :back, :notice => 'There was a problem creating the tag.'
+    end
   end
 
   def edit
@@ -16,10 +20,10 @@ class TagsController < ApplicationController
 
   def update
     tag = Tag.find(params[:id])
-    if tag.update_attributes(tag_params)  # this line is causing errors:  undefined method `update_attributes'
-      redirect_to tags_path, :notice => 'Your tag has successfully been updated.'
+    if tag.update_attributes(tag_params)
+      redirect_to tags_path, :notice => 'Tag has successfully been updated.'
     else
-      redirect_to :back, :notice => 'There was an error updating your tag.'
+      redirect_to :back, :notice => 'There was a problem updating the tag.'
     end
   end
 
