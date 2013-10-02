@@ -7,7 +7,11 @@ class TagsController < ApplicationController
 
   def create
     @tag = Tag.create(tag_params)
-    redirect_to :back
+    if @tag.save
+      redirect_to :back, :notice => 'Your tag has successfully been created.'
+    else
+      redirect_to :back, :notice => 'There was an error creating your tag'
+    end
   end
 
   def edit
