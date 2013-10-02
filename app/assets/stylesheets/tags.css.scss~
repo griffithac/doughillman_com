@@ -1,3 +1,18 @@
 // Place all the styles related to the Tags controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#flash_notice {
+  background: #5FFF5F;
+  border: 5px solid darken(#5FFF5F, 5%);
+  text-align: center;
+  padding: 5px;
+  color: darken(#009800, 5%)
+}
+
+#flash_alert {
+  background: #FF5F5F;
+  border: 5px solid darken(#FF5F5F, 5%);
+  text-align: center;
+  color: #980000
+}

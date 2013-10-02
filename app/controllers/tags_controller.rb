@@ -12,7 +12,7 @@ class TagsController < ApplicationController
     if @tag.save
       redirect_to :back, :notice => 'Tag was succefully created.'
     else
-      redirect_to :back, :notice => 'There was a problem creating the tag.'
+      redirect_to :back, :alert => 'There was a problem creating the tag.'
     end
   end
 

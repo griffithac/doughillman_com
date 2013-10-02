@@ -3,9 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #flash_notice {
-  background: green;
-  border: 1px solid darken(green, 20%);
+  background: #5FFF5F;
+  border: 3px solid darken(#5FFF5F, 5%);
   text-align: center;
   padding: 5px;
-  color: white;
+  color: darken(#009800, 5%)
+}
+
+#flash_alert {
+  background: #FF5F5F;
+  border: 3px solid darken(#FF5F5F, 5%);
+  text-align: center;
+  color: #980000
 }
