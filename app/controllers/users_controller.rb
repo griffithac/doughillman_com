@@ -8,10 +8,10 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  # GET /users/1
-  # GET /users/1.json
-  def show
-  end
+  # GET /users/1 comment
+  # GET /users/1.json comment
+  ## def show
+  ## end
 
   # GET /users/new
   def new

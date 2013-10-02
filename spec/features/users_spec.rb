@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "Users" do
 
   describe "GET /users" do
-    it "should display user(s)"
+    it "should display user(s)" do
     end
 
     it "can create a new user" do
