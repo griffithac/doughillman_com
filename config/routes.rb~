@@ -1,7 +1,9 @@
 DoughillmanCom::Application.routes.draw do
-  root :to => 'tags#index' # This will change later
+  root :to => 'static_pages#home' # **This will change later. controller must be lower case due to "\A[a-z_0-9\/]*\z/" in rails.**
   get "tags/index"
+
   resources :tags
+  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
