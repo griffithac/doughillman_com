@@ -28,7 +28,7 @@ describe "Tags" do
       click_link 'Edit'
       current_path.should == edit_tag_path(@tag)
       save_and_open_page
-      find_field ('Task').value.should == '上海'
+      find_field('Tag').value.should == '上海'
 
       fill_in 'Tag', :with => '上海'
       click_button 'Update Tag'
