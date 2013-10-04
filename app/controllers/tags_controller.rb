@@ -7,6 +7,15 @@ class TagsController < ApplicationController
   end
 
 
+  def new
+    @tag = Tag.new
+
+    respond_to do |format|
+      format.html
+    end
+  end
+
+
   def create
     @tag = Tag.create(tag_params)
     if @tag.save

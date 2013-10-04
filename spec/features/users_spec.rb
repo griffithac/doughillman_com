@@ -2,8 +2,14 @@ require 'spec_helper'
 
 describe "Users" do
 
+  before do
+    @user = User.create :tag => 'Quzhou'
+  end
+
   describe "GET /users" do
     it "should display user(s)" do
+      visit users_path
+      page.should have_content "Doug Hillman"
     end
 
     it "can create a new user" do
