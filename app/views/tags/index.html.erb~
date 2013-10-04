@@ -1,7 +1,5 @@
 <h1>Tags</h1>
 
-<%= render 'form' %>
-
 <ul>
   <% @tags.each do |tag| %>
 
@@ -13,3 +11,5 @@
 
   <% end %>
 </ul>
+
+<%= link_to 'New Tag', new_tag_path %>

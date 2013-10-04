@@ -19,7 +19,7 @@ describe "Tags" do
       visit tags_path
       page.should have_content "Tags"
       click_link "New Tag"
-      current_path == new_tag_path
+      current_path == tag_new_path
       fill_in "Tag", :with => "Shanghai"
       click_button "Create Tag"
       current_path == tags_path
