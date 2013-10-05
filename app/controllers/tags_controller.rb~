@@ -43,7 +43,7 @@ class TagsController < ApplicationController
 
   def destroy
     Tag.delete(params[:id])
-    redirect_to :back, :notice => "Tag was deleted."
+    redirect_to :back, :notice => "Tag has been deleted."
   end
 
 

@@ -8,7 +8,7 @@ describe Tag do
   end
 
   context "#fields" do
-    it { should respond_to (:tag) }
+    it { should respondto (:tag) }
   end
 
   context "#associations" do

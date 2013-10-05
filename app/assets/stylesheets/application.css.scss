@@ -1,0 +1,16 @@
+//For application-wide styles//
+
+#flash_notice {
+  background: #5FFF5F;
+  border: 2px solid darken(#5FFF5F, 5%);
+  text-align: center;
+  padding: 5px;
+  color: darken(#009800, 5%)
+}
+
+#flash_alert {
+  background: #FF5F5F;
+  border: 2px solid darken(#FF5F5F, 5%);
+  text-align: center;
+  color: #980000
+}
